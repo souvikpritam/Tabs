@@ -1,4 +1,4 @@
-/*New Css */
+/*Tabs CSS*/
 
 .vc_tab .nav-tabs>li.active>a,
 .vc_tab .nav-tabs>li.active>a:focus,
@@ -115,13 +115,21 @@
     padding: 13px 15px;
 }
 
-.panel-title.icon:after {
+a[aria-expanded=false] .panel-heading .panel-title.icon:after {
+    position: absolute;
+    content: '\f105';
+    font-family: FontAwesome;
+    right: 0;
+    padding: 5px 30px 0px 0px;  
+}
+
+a[aria-expanded=true] .panel-heading .panel-title.icon:after {
     position: absolute;
     content: '\f107';
     font-family: FontAwesome;
     right: 0;
-    padding-top: 5px;
-    padding-right: 30px;   
+    padding: 5px 30px 0px 0px;
+    transition: .3s; 
 }
 
 .icon img {
@@ -132,6 +140,34 @@
     left: -6px;
 }
 
+
+/*End of Tabs CSS*/
+
+
+/* vc_timeline_wrapper */
+
+.vc_timeline_wrapper .post-title h2 {
+	line-height: 40px;
+}
+
+.vc_timeline_wrapper {
+    margin: 30px 0px;
+}
+.vc_timeline_wrapper .timeline .post-item {
+    padding-left: 170px;
+}
+.vc_timeline_wrapper h2.entry-title {
+    padding-top: 0;
+    margin-left: 0;
+}
+/* End of vc_timeline_wrapper */
+
+/* Recent Posts */
+.desc {
+    min-height: 150px !important;
+}
+
+/* Recent Posts */
 
 @media only screen and (max-width: 1240px) {
     .vc_tab .nav-tabs>li>a {
@@ -164,4 +200,13 @@
     .tabs-visible {
         display: none;
     }
+    .vc_timeline_wrapper .timeline .post-item {
+        padding-left: 0px !important;
+    }
+
+    .image_frame {
+        border-color: transparent;
+    }
 }
+
+
